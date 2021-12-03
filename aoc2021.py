@@ -20,9 +20,12 @@ def main():
 
     try:
         handler = importlib.import_module(package + '.' + module)
-    except:
+    except ModuleNotFoundError:
         print(package + ' ' + module + ' is not implemented!')
-        exit(-1)
+        return -1
+    except Exception as e:
+        print(e)
+        return -1
 
     print(handler.compute(read_input(package)))
 
