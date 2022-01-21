@@ -1,1 +1,1 @@
-include src/aoc2021/*/input.txt
+include aoc2021/*/input.txt
